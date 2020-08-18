@@ -1,0 +1,39 @@
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+    margin: 0;
+    width: 100%;
+    display: block;
+
+    .nav-bar {
+        background-color: $nav-bar-background;
+        height: 4rem;
+        opacity: 0.7;
+
+        .left {
+            float: left;
+
+            .name {
+                padding: 1rem;
+                font-size: 2rem;
+                font-family: 'Open Sans Condensed', sans-serif;
+            }
+        }
+        .right {
+            position: relative;
+            text-align: right;
+
+            .container {
+                position: static;
+                bottom: 0;
+                padding-top: 1rem;
+
+                a {
+                    text-decoration: none;
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+}

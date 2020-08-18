@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+body {
+  margin: 0;
+  width: 100%;
+  display: block; }
+  body .nav-bar {
+    background-color: #fae6df;
+    height: 4rem;
+    opacity: 0.7; }
+    body .nav-bar .left {
+      float: left; }
+      body .nav-bar .left .name {
+        padding: 1rem;
+        font-size: 2rem;
+        font-family: 'Open Sans Condensed', sans-serif; }
+    body .nav-bar .right {
+      position: relative;
+      text-align: right; }
+      body .nav-bar .right .container {
+        position: static;
+        bottom: 0;
+        padding-top: 1rem; }
+        body .nav-bar .right .container a {
+          text-decoration: none;
+          padding: 0 1rem; }
+
+/*# sourceMappingURL=style.css.map */
