@@ -10,6 +10,7 @@ body {
     .nav-container {
 
         background-color: $nav-bar-background;
+
         .nav-bar {
             color: $white;
             display: flex;
@@ -21,12 +22,13 @@ body {
     
             .left {
                 flex: 1 50%;
-    
             }
             .right {
                 flex: 1 50%;
                 display: flex;
                 flex-direction: row;
+                position: absolute;
+                right: 0;
     
                 .container-links {
                     display: flex;
@@ -43,7 +45,7 @@ body {
                 }
                 .burger {
                     width: 1.5rem;
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     position: absolute;
                     right: 0;
@@ -56,9 +58,13 @@ body {
                         //     transform: rotate(70deg);
                         // }
                         .top {
+                            // -moz-transform: rotate(70deg) translate(12px, 0px);
+                            // -webkit-transform: rotate(70deg) translate(12px, 0px);
+                            // -o-transform: rotate(70deg) translate(12px, 0px);
+                            // -ms-transform: rotate(70deg) translate(12px, 0px);
 
                             transform: rotate(270deg) translate(-15px, 0px);
-                                                    }
+                            }
                     }
     
                     .top {
@@ -70,6 +76,37 @@ body {
                     }
                     .bottom {
                         @include burger;
+                    }
+                }
+            }
+        }
+    }
+    .skills-container {
+        background-color: $background-light-grey;
+        height: 20rem;
+        padding-top: 5rem;
+
+        .skills {
+            display: flex;
+            flex-direction: row;
+
+            .skill {
+                margin: auto;
+                display: flex;
+                flex:1 30%;
+                height: 15rem;
+                margin: 2rem 4rem;
+                position: relative;
+
+                .title {
+                    margin: auto;
+                }
+                .skill-sub {
+                    padding: 0;
+                    position: absolute;
+
+                    li {
+                        list-style: none;
                     }
                 }
             }

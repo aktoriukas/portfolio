@@ -16,7 +16,9 @@ body {
       body .nav-container .nav-bar .right {
         flex: 1 50%;
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        position: absolute;
+        right: 0; }
         body .nav-container .nav-bar .right .container-links {
           display: flex;
           flex-direction: row; }
@@ -26,7 +28,7 @@ body {
             color: #ffffff; }
         body .nav-container .nav-bar .right .burger {
           width: 1.5rem;
-          display: flex;
+          display: none;
           flex-direction: column;
           position: absolute;
           right: 0;
@@ -49,5 +51,26 @@ body {
             background-color: #ffffff;
             transition: 0.5s ease-in-out;
             border-radius: 3rem; }
+  body .skills-container {
+    background-color: #d2d1d1;
+    height: 20rem;
+    padding-top: 5rem; }
+    body .skills-container .skills {
+      display: flex;
+      flex-direction: row; }
+      body .skills-container .skills .skill {
+        margin: auto;
+        display: flex;
+        flex: 1 30%;
+        height: 15rem;
+        margin: 2rem 4rem;
+        position: relative; }
+        body .skills-container .skills .skill .title {
+          margin: auto; }
+        body .skills-container .skills .skill .skill-sub {
+          padding: 0;
+          position: absolute; }
+          body .skills-container .skills .skill .skill-sub li {
+            list-style: none; }
 
 /*# sourceMappingURL=style.css.map */
