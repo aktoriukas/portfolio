@@ -1,37 +1,76 @@
 @import "variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import "mixin.scss";
+
 
 body {
     margin: 0;
     width: 100%;
-    display: block;
 
-    .nav-bar {
+    .nav-container {
+
         background-color: $nav-bar-background;
-        height: 4rem;
-        opacity: 0.7;
-
-        .left {
-            float: left;
-
-            .name {
-                padding: 1rem;
-                font-size: 2rem;
-                font-family: 'Open Sans Condensed', sans-serif;
-            }
-        }
-        .right {
+        .nav-bar {
+            color: $white;
+            display: flex;
+            flex-direction: row;
+            max-width: $max-width-navbar;
+            margin: auto;
             position: relative;
-            text-align: right;
+            padding: 1rem;
+    
+            .left {
+                flex: 1 50%;
+    
+            }
+            .right {
+                flex: 1 50%;
+                display: flex;
+                flex-direction: row;
+    
+                .container-links {
+                    display: flex;
+                    flex-direction: row;
 
-            .container {
-                position: static;
-                bottom: 0;
-                padding-top: 1rem;
+                    a {
+                        &.link {
+                            margin-right: 1rem;
+                            text-decoration: none;
+                            color: $white;
+                        }
+    
+                    }
+                }
+                .burger {
+                    width: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
 
-                a {
-                    text-decoration: none;
-                    padding: 0 1rem;
+                    &:hover {
+                        // .middle,
+                        // .top,
+                        // .bottom {
+                        //     transform: rotate(70deg);
+                        // }
+                        .top {
+
+                            transform: rotate(270deg) translate(-15px, 0px);
+                                                    }
+                    }
+    
+                    .top {
+                        @include burger;
+                    }
+                    .middle {
+                        margin: 0.5rem 0;
+                        @include burger;
+                    }
+                    .bottom {
+                        @include burger;
+                    }
                 }
             }
         }
