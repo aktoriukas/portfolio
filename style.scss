@@ -6,6 +6,7 @@
 body {
     margin: 0;
     width: 100%;
+    background-color: $background-light-grey;
 
     .nav-container {
 
@@ -110,10 +111,30 @@ body {
             }
         }
     }
+    .intro-container {
+        &:before {
+            content: "";
+            background-image: url(images/wood.jpg);
+            background-size: cover;
+            opacity: 0.2;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 30rem;
+            left: 0px;
+            z-index: -1;
+        }
+        .about {
+            margin: auto;
+            max-width: 30rem;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+    }
     .skills-container {
-        background-color: $background-light-grey;
         height: fit-content;
         padding: 4rem 1rem 4rem;
+        z-index: 2;
 
         .skills {
             display: flex;
