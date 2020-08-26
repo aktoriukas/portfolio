@@ -111,29 +111,44 @@ body {
             }
         }
     }
-    .intro-container {
-        &:before {
-            content: "";
-            background-image: url(images/wood.jpg);
-            background-size: cover;
-            opacity: 0.2;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 30rem;
-            left: 0px;
-            z-index: -1;
+    .intro {
+        height: fit-content;
+        position: relative;
+        .intro-container {
+            &:before {
+                content: "";
+                background-image: url(images/wall.jpg);
+                background-size: cover;
+                background-position-y: 70%;
+                opacity: 0.1;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0;
+                left: 0px;
+                z-index: -1;
+            }
+            .about {
+                margin: auto;
+                max-width: 30rem;
+                text-align: center;
+                padding: 5rem 1rem;
+            }
         }
-        .about {
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
             margin: auto;
-            max-width: 30rem;
-            text-align: center;
-            padding: 5rem 1rem;
+            bottom: 0;
+            height: 1px;
+            position: relative;
+            background-color: $skill-legs;
         }
     }
     .skills-container {
         height: fit-content;
-        padding: 4rem 1rem 4rem;
+        padding: 1rem;
         z-index: 2;
 
         .skills {
@@ -264,6 +279,32 @@ body {
                     }
                 }
             }
+        }
+    }
+    .experience {
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            margin: auto;
+            bottom: 0;
+            height: 1px;
+            position: relative;
+            background-color: $skill-legs;
+            margin-top: 3rem;
+        }
+        .container {
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            .work {
+                flex: 1 50%;
+            }
+            .trainings {
+                flex: 1 50%;
+    
+            }
+    
         }
     }
 }
