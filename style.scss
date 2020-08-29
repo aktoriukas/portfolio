@@ -11,7 +11,7 @@ body {
     .nav-container {
 
         background-color: $main-red;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.719);
+        border-bottom: $header-border;
 
         .nav-bar {
             color: $white;
@@ -148,7 +148,8 @@ body {
                 padding: 5rem 1rem;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 300;
-                line-height: 1.5rem;
+                line-height: 1.7rem;
+                font-size: 1rem;
             }
         }
         &:after {
@@ -167,12 +168,13 @@ body {
         padding: 1rem;
         z-index: 2;
         padding: 5rem 0 10rem;
+        max-width: $max-width-content;
+        overflow: hidden;
+        margin:auto;
 
         .skills {
             display: flex;
             flex-direction: row;
-            max-width: $max-width-content;
-            margin:auto;
 
             @media (max-width: 992px) {
                 flex-direction: column;
@@ -332,6 +334,7 @@ body {
                 left:-1rem;
                 top: 20%;
                 border: 1px solid $main-grey-dim;
+                border-radius: 0 8rem 0 0;
 
                 @media (max-width: 768px) {
                     width: 12rem;
@@ -399,13 +402,17 @@ body {
 
                                 @media (max-width: 990px) {
                                     color: $main-red;
-                                }                
+                                }       
+                                &:hover {
+                                    border-bottom: 1px solid $main-red-dim;
+                                }         
                             }
                             .training-description {
                                 color:$main-grey-opacity-max;
-                                line-height: 1.3rem;
+                                line-height: 1.5rem;
                                 font-family: 'Montserrat', sans-serif;
                                 font-weight: 100;
+                                padding-right: 2rem;
                                 @media (max-width: 990px) {
                                     margin-top: 0.2rem
                                 }                
@@ -425,55 +432,65 @@ body {
                     }
                 }
             }
-
-            // @media (max-width: 992px) {
-            //     flex-direction: column;
-            // }    
-
-
-            // .work,
-            // .trainings {
-            //     flex: 1 50%;
-            //     padding: 1rem;
-            //     position: relative;
-
-            //     .work-description,
-
-            //     .work-title,
-            //     .training-title {
-            //         font-size: 1.2rem;
-            //         border-top: 1px solid $main-grey;
-            //         padding-top: 1rem;
-            //         font-family: 'Montserrat', sans-serif;
-            //         font-weight: 400;
-
-            //     }
-
-            //     .work-company {
-            //         margin: 0;
-            //         color: $main-red;
-            //         font-weight: 400;
-
-            //     }
-            //     .work-time {
-            //         margin: 0;
-            //         font-weight: 100;
-            //     }
-            //     .training {
-            //     .training-list {
-    
-                        // &:before {
-                        //     content: "";
-                        //     position: absolute;
-                        //     width: 0.2rem;
-                        //     height: 0.2rem;
-                        //     background-color: $main-red;
-                        //     left: 1.5rem;
-                        //     }    
-                        // }
-                    // }
-                // }
-            // }    
         }
+    }
+    footer {
+        margin-top:5rem;
+        position: relative;
+        background-color: $main-red;
+        width: 100%;
+        height: 10rem;
+        border-top:$header-border;
+
+        .footer-container {
+
+            padding: 2rem;
+
+            .contacts {
+                display: flex;
+                flex-direction: row;
+                position: relative;
+    
+                .social {
+                    flex: 1 1 30%;
+                    list-style: none;
+                    position: relative;
+    
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+                .git-hub {
+                    &:before {
+                        background-image: url(images/github.png);
+                    }
+                }
+                .email {
+                    &:before {
+                        background-image: url(images/email.png);
+                    }
+                }
+                .linked-in {
+                    &:before {
+                        background-image: url(images/linkedin.png);
+                        top: -0.1rem;
+                    }
+                }
+                .git-hub,
+                .email,
+                .linked-in {
+                    &:before {
+                        content: "";
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        position: absolute;
+                        background-size: contain;
+                        left: -2rem;
+                    }
+                }
+            }    
+        }
+        
     }
 }
