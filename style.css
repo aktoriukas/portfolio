@@ -373,7 +373,7 @@ body {
           border: 0.4rem solid rgba(141, 66, 66, 0.1);
           border-radius: 0.5rem 4rem 0 0.5rem;
           overflow: hidden;
-          transition: 1s ease-in-out; }
+          transition: 0.5s ease-in-out; }
           body .projects .container-projects .projects-list .project .container:hover {
             border: 0.4rem solid rgba(141, 66, 66, 0.4); }
             body .projects .container-projects .projects-list .project .container:hover img {
@@ -384,7 +384,7 @@ body {
             position: absolute;
             opacity: 0.4;
             vertical-align: middle;
-            transition: 1s ease-in-out; }
+            transition: 0.5s ease-in-out; }
         body .projects .container-projects .projects-list .project .title-project {
           text-align: center;
           margin: 1rem;
