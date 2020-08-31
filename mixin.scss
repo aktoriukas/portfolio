@@ -4,3 +4,15 @@
     transition: 0.5s ease-in-out;
     border-radius: 3rem;
 }
+
+@mixin divide-line {
+    content: "";
+    display: block;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    height: 1px;
+    position: relative;
+    background-color: $main-grey;
+
+}

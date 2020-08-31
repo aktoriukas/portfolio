@@ -1,0 +1,111 @@
+
+.nav-container {
+
+    background-color: $main-red;
+    border-bottom: $header-border;
+
+    .nav-bar {
+        color: $white;
+        display: flex;
+        flex-direction: row;
+        max-width: $max-width-navbar;
+        margin: auto;
+        position: relative;
+        height: 3rem;
+
+        .left {
+            flex: 1 50%;
+            
+            .name {
+                font-size: 1.4rem;
+                position: absolute;
+                bottom: 0;
+                padding-left: 1rem;
+            }
+        }
+        .right {
+            flex: 1 50%;
+            display: flex;
+            flex-direction: row;
+            // position: absolute;
+            right: 0;
+
+            .menu{
+                position: absolute;
+                bottom: 0;
+                right:0;
+                padding-top: 0.5rem;
+
+                @media (max-width: 768px) {
+                    position: inherit;
+                }
+
+
+                .container-links {
+                    display: flex;
+                    flex-direction: row;
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+
+                    a {
+                        padding: 0.2rem;
+                        &.link {
+                            margin-right: 1rem;
+                            text-decoration: none;
+                            color: $white;
+
+                        }
+                    }
+                }
+
+                .burger {
+                    width: 1.5rem;
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+                    margin: 0.5rem 1.5rem 0 0;
+                    padding: 0.2rem;
+
+                    @media (max-width: 768px) {
+                        display: flex;
+                    }
+
+
+                    &:hover {
+                        border: 0.1rem solid $white;
+                        padding: 0.1rem;
+                        border-radius: 0.2rem 1rem 0 0.2rem;
+                        
+                        .top {
+                            transform: scale(0);
+                        }
+                        .middle {
+                            transform: rotate(38deg) translate(0px, 0px);
+                        }
+                        
+                        .bottom {
+                            transform: scale(0);
+                        }
+                    }
+    
+                    .top {
+                        @include burger;
+                        transition:0.3s;
+                    }
+                    .middle {
+                        margin: 0.5rem 0;
+                        @include burger;
+                    }
+                    .bottom {
+                        @include burger;
+                        transition:0.3s;
+                    }
+                }    
+            }
+        }
+    }
+}
